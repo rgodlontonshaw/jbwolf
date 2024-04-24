@@ -6,7 +6,7 @@
 
 /* Override for bold text within .section-heading */
 .section-heading b, .section-heading strong {
-    font-family: Arial, sans-serif; /* or any other suitable font */
+    font-family: 'Sigmar One', sans-serif;
 }
 
 
@@ -443,7 +443,7 @@ section {
 }
 
 .play-icon:before {
-    font-family: 'Wolf Rubeus', sans-serif;
+    font-family: 'Sigmar One', sans-serif;
     content: '\f144';
     speak: none;
     font-size: 74px;
@@ -579,7 +579,7 @@ section {
 }
 
 #nav-trigger span:after {
-    font-family: 'Wolf Rubeus', sans-serif;
+    font-family: 'Sigmar One', sans-serif;
     display: inline-block;
     width: 38px;
     height: 71px;
@@ -767,7 +767,7 @@ a img:hover {
 }
 
 #landing-footer p {
-    font-family: 'Anton', sans-serif;
+    font-family: 'Sigmar One', sans-serif;
     font-size: 14px; /* Legible font size */
 }
 
@@ -850,6 +850,50 @@ h6 {
     color: transparent; /* Fallback for browsers that do not support text-fill-color */
     display: inline; /* Ensures the span doesn't break the line */
 }
+
+#about {
+    background-image: url('images/jordaanmooning.png');
+    background-size: cover; /* Ensures the image covers the entire element */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    
+    /* Dark gradient blue background */
+    background: linear-gradient(to right, #243b55, #141e30); /* Gradient from dark blue to darker blue */
+}
+
+/* Update the color of all text elements within the #mooning section */
+#about, 
+#about h3,
+#about .section-title,
+#about footer,
+#about .section-subtitle,
+#aboutg p,
+#about blockquote q,
+#about footer {
+    color: #ffffff; /* Change text color to white for better readability */
+}
+
+/* If there are any links within the #mooning section, they should also be styled to stand out */
+#about a {
+    color: #ffd700; /* This is a gold color, for example */
+}
+
+#about a:hover {
+    color: #cca300; /* A darker shade of gold for hover state */
+}
+
+/* Adjust blockquote colors if necessary */
+#about blockquote {
+    border-left-color: #ffffff; /* Or any other property that needs to be visible */
+}
+
+
+#about {
+    background-image: url('images/jordaanmooning.png');
+    
+    background-color: #3e2723; /* This is a dark brown-black color */
+}
+
 
 /*------------------------------------------------------------------------------------------*/
 /* 4. Banner */
