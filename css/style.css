@@ -464,6 +464,7 @@ section {
 .button {
     font-size: 16px;
     margin: 35px 0;
+    border-radius: 10px; 
     padding: 11px 16px;
     -webkit-transition: all .3s linear;
     -moz-transition: all .3s linear;
@@ -472,6 +473,8 @@ section {
     border-width: 3px;
     border-style: solid;
 }
+
+
 
 /* Play Button */
 
@@ -770,6 +773,8 @@ nav#nav-mobile a:hover {
     margin-top: 27px;
 }
 
+
+
 /* --------- 2.6 Images ---------- */
 
 /*Alignment*/
@@ -916,11 +921,13 @@ h6 {
 
 #banner {
     background-size: cover;
+    background-image: url('images/bgnew.jpg'); /* Set new background image */
 }
 
 #banner-content.row {
     padding-top: 170px;
     padding-bottom: 100px;
+    color: white; /* Set text color to white */
 }
 
 #banner h1 {
@@ -952,17 +959,27 @@ h6 {
 /*Icon Block*/
 
 .icon-block {
-    position: relative;
+    background-image: url('images/jordaanmooning.png');
+    background-size: cover; /* Cover the entire area */
+    background-position: center; /* Center the background image */
+    text-align: center; /* Center the text */
 }
 
-.icon-block h4 {
-    font-weight: bold;
-    padding-top: 0;
+.icon-block-description, .col-3 {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left; /* Keep text alignment to left or center as per your design */
 }
 
-.icon-block .icon {
-    position: absolute;
+/* Optional: If you want to ensure the content is vertically centered as well */
+.icon-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* You might need to adjust this */
 }
+
 
 .icon-block p {
     margin-top: 0;
@@ -1841,6 +1858,8 @@ blockquote {
     100% {
         opacity: 1;
         -webkit-transform: translate(0, 220%);
+        -moz-transform: translate(0, 220%);
+        -o-transform: translate(0, 220%);
         transform: translate(0, 220%);
     }
 }
@@ -1855,71 +1874,6 @@ blockquote {
     }
     33% {
         opacity: 1;
-        -moz-transform: translate(110%, 0);
-        transform: translate(110%, 0);
-    }
-    50% {
-        opacity: .25;
-    }
-    66% {
-        opacity: 1;
-        -moz-transform: translate(220%, 220%);
-        transform: translate(220%, 220%);
-    }
-    83% {
-        opacity: .25;
-    }
-    100% {
-        opacity: 1;
-        -moz-transform: translate(0, 220%);
-        transform: translate(0, 220%);
-    }
-}
-
-@-o-keyframes ball-triangle-path-ball-one {
-    0% {
-        -o-transform: translate(0, 220%);
-        transform: translate(0, 220%);
-    }
-    17% {
-        opacity: .25;
-    }
-    33% {
-        opacity: 1;
-        -o-transform: translate(110%, 0);
-        transform: translate(110%, 0);
-    }
-    50% {
-        opacity: .25;
-    }
-    66% {
-        opacity: 1;
-        -o-transform: translate(220%, 220%);
-        transform: translate(220%, 220%);
-    }
-    83% {
-        opacity: .25;
-    }
-    100% {
-        opacity: 1;
-        -o-transform: translate(0, 220%);
-        transform: translate(0, 220%);
-    }
-}
-
-@keyframes ball-triangle-path-ball-one {
-    0% {
-        -webkit-transform: translate(0, 220%);
-        -moz-transform: translate(0, 220%);
-        -o-transform: translate(0, 220%);
-        transform: translate(0, 220%);
-    }
-    17% {
-        opacity: .25;
-    }
-    33% {
-        opacity: 1;
-        -webkit-transform: translate(110%, 0);
         -moz-transform: translate(110%, 0);
         -o-transform: translate(110%, 0);
         transform: translate(110%, 0);

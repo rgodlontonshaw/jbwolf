@@ -13,15 +13,14 @@
 /* 1. Website Default Styling */
 /*------------------------------------------------------------------------------------------*/
 @import url('https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 
 body {
     background:#fff;
-    font-family: 'Anton', sans-serif;
+    font-family: 'Sigmar One', sans-serif;
 }
 
 .section-heading, .section-heading b {
-    font-family: 'Anton', sans-serif;
+    font-family: 'Sigmar One', sans-serif;
 }
 
 /* Default Link Color */
@@ -50,7 +49,46 @@ a:hover, #header.nav-solid nav a:hover {
     border-color:#d2b356;
 }
 
-#mooning {
+#about {
+    background-image: url('images/jordaanmooning.png');
+    background-size: cover; /* Ensures the image covers the entire element */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    
+    /* Dark gradient blue background */
+    background: linear-gradient(to right, #243b55, #141e30); /* Gradient from dark blue to darker blue */
+}
+
+/* Update the color of all text elements within the #mooning section */
+#about, 
+#about h3,
+#about .section-title,
+#about footer,
+#about .section-subtitle,
+#aboutg p,
+#about blockquote q,
+#about footer {
+    color: #ffffff; /* Change text color to white for better readability */
+}
+
+/* If there are any links within the #mooning section, they should also be styled to stand out */
+#about a {
+    color: #ffd700; /* This is a gold color, for example */
+}
+
+#about a:hover {
+    color: #cca300; /* A darker shade of gold for hover state */
+}
+
+/* Adjust blockquote colors if necessary */
+#about blockquote {
+    border-left-color: #ffffff; /* Or any other property that needs to be visible */
+}
+
+
+#about {
+    background-image: url('images/jordaanmooning.png');
+    
     background-color: #3e2723; /* This is a dark brown-black color */
 }
 
@@ -90,14 +128,14 @@ a:hover, #header.nav-solid nav a:hover {
 /* Transparent Navigation Color on a Banner */
 
 #header nav a, #header i {
-    color:#111;
+    color:#fff;
 }
 
 
 /* Navigation Colors when the Navigation is sticky and solid */ 
 
 #header.nav-solid, #header.nav-solid a, #header.nav-solid i, #nav-mobile ul li a {
-    color:#333;
+    color:#fff;
 }
 
 
