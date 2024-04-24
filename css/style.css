@@ -1,34 +1,3 @@
-/* Namari Landing Page v.1.1.0 Style Index - a free landing page by shapingrain.com
-
-1. Default and Reset styles
-- 1.1 Input Elements
-2. Global elements
-- 2.1 Header
-- 2.2 Logo
-- 2.3 Buttons
-- 2.4 Navigation
-- 2.5 Social Elements
-- 2.6 Images
-3. Fonts and Headings
-4. Banner
-- 4.1 SignUp Form
-5. Content Elements
-- 5.1 Icons
-- 5.2 Parallax Elements
-- 5.3 Divider
-6. Landing Page Sections
-- 6.1 Features
-- 6.2 Testimonials
-- 6.3 Gallery
-- 6.4 Video
-- 6.5 Clients
-- 6.6 Pricing Table
-7. Footer
-
-
-/*------------------------------------------------------------------------------------------*/
-/* 1. Defaults & Reset of specific styles across browsers */
-/*------------------------------------------------------------------------------------------*/
 
 
 .section-heading {
@@ -163,55 +132,13 @@ figure {
 }
 
 /* Page Border */
-
-.page-border {
-    position: fixed;
-    z-index: 999999;
-    pointer-events: none;
-}
-
-.page-border .bottom-border, .page-border .left-border, .page-border .right-border, .page-border .top-border {
-    background: gold;
-    position: fixed;
-    z-index: 9999;
-}
-
-.page-border > .top-border, .page-border > .right-border, .page-border > .bottom-border, .page-border > .left-border {
-    padding: 11px;
-    background: #ccc;
-}
-
-.page-border .bottom-border, .page-border .top-border {
-    width: 100%;
-    padding: 10px;
-    left: 0;
-}
-
-.page-border .left-border, .page-border .right-border {
-    padding: 10px;
-    height: 100%;
-    top: 0;
-}
-
-.page-border .top-border {
-    top: 0;
-}
-
-.page-border .right-border {
-    right: 0;
-}
-
-.page-border .bottom-border {
-    bottom: 0;
-}
-
-.page-border .left-border {
-    left: 0;
+.page-border, .page-border div {
+    display: none; 
 }
 
 #wrapper {
-    margin:0 15px;
-    padding: 15px 0;
+    padding: 0;
+    border: none;
     position: relative;
 }
 
@@ -915,12 +842,24 @@ h6 {
     padding-bottom: 0;
 }
 
+.solana-gradient {
+    background: linear-gradient(45deg, #00CFFD, #00B4E6); /* Example gradient from Solana blue to lighter blue */
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent; /* Fallback for browsers that do not support text-fill-color */
+    display: inline; /* Ensures the span doesn't break the line */
+}
+
 /*------------------------------------------------------------------------------------------*/
 /* 4. Banner */
 /*------------------------------------------------------------------------------------------*/
 
 #banner {
     background-size: cover;
+    background-position: center;
+    min-height: 900px; 
+    height: auto; 
     background-image: url('images/bgnew.jpg'); /* Set new background image */
 }
 

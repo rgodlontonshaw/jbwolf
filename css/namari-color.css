@@ -1,22 +1,17 @@
-/* Namari Landing Page Dynamic Style Index
-
-1. Website Default Styling
-2. Navigation
-3. Primary and Secondary Colors
-4. Banner
-5. Typography
-6. Buttons
-7. Footer
-
-
-/*------------------------------------------------------------------------------------------*/
-/* 1. Website Default Styling */
-/*------------------------------------------------------------------------------------------*/
 @import url('https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap');
 
 body {
     background:#fff;
     font-family: 'Sigmar One', sans-serif;
+}
+
+.solana-gradient {
+    background: linear-gradient(45deg, #00CFFD, #00B4E6); /* Example gradient from Solana blue to lighter blue */
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent; /* Fallback for browsers that do not support text-fill-color */
+    display: inline; /* Ensures the span doesn't break the line */
 }
 
 .section-heading, .section-heading b {
