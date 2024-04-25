@@ -863,6 +863,48 @@ h6 {
     display: inline; /* Ensures the span doesn't break the line */
 }
 
+.button-nomics-panel {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Adjust the gap as necessary */
+}
+
+.button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff; /* This should be your button background color */
+    border-radius: 10px; /* Adjust for rounded corners */
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    transition: transform 0.2s ease; /* Smooth transition for hover effect */
+}
+
+.button:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.button img {
+    width: 100px; /* Adjust as necessary */
+    height: 100px; /* Maintain aspect ratio */
+}
+
+.button-text {
+    margin-top: 10px; /* Space between image and text */
+    color: #000; /* Text color */
+    font-weight: bold;
+    text-align: center;
+    font-size: 16px; /* Adjust text size as necessary */
+}
+
+/* Add responsive breakpoints if needed */
+@media (max-width: 768px) {
+    .button-panel {
+        flex-direction: column;
+    }
+}
+
+
 #about {
     background-image: url('images/jordaanmooning.png');
     background-size: cover; /* Ensures the image covers the entire element */
@@ -900,6 +942,11 @@ h6 {
 }
 
 
+#about {
+    background-image: url('images/jordaanmooning.png');
+    
+    background-color: #3e2723; /* This is a dark brown-black color */
+}
 
 
 /*------------------------------------------------------------------------------------------*/
