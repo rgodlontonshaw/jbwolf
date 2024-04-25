@@ -337,6 +337,60 @@ h6 {
 }
 
 
+
+/* Button Text */
+
+.button, input[type="submit"]  {
+    font-family: 'Sigmar One', sans-serif;
+     font-size:14px;
+     font-weight:bold;
+     color:#111;
+ }
+ 
+ 
+ /* Button Color */
+ 
+ .button, input[type="submit"] {
+     border-color:#111;
+ }
+ 
+ 
+ /* Button Hover Color */
+ 
+ .button-front:hover,  input[type="submit"]:hover {
+     border-color:#d2b356;
+     color:#d2b356;
+ }
+ 
+ 
+ /* ----------Banner Buttons---------- */
+ 
+ 
+ /* Button Text */
+ 
+ #banner .button-front {
+    font-family: 'Sigmar One', sans-serif;
+     font-size:16px;
+     color:#111;
+ }
+ 
+ 
+ /* Button Color */
+ 
+ #banner .button-front {
+     border-color:#111;
+ }
+ 
+ 
+ /* Button Hover Color */
+ 
+ #banner .button-front:hover {
+     color:#d2b356;
+     border-color:#d2b356;
+ }
+ 
+
+
 /*------------------------------------------------------------------------------------------*/
 /* 7. Footer */
 /*------------------------------------------------------------------------------------------*/

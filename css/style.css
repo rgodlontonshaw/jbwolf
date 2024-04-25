@@ -400,19 +400,6 @@ section {
 
 /*Style*/
 
-.button {
-    font-size: 16px;
-    margin: 35px 0;
-    border-radius: 10px; 
-    padding: 11px 16px;
-    -webkit-transition: all .3s linear;
-    -moz-transition: all .3s linear;
-    transition: all .3s linear;
-    display: inline-block;
-    border-width: 3px;
-    border-style: solid;
-}
-
 
 
 /* Play Button */
@@ -869,12 +856,37 @@ h6 {
     gap: 10px; /* Adjust the gap as necessary */
 }
 
+.button-front {
+    font-size: 16px;
+    margin: 35px 0;
+    border-radius: 10px; 
+    padding: 11px 16px;
+    -webkit-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+    transition: all .3s linear;
+    display: inline-block;
+    border-width: 3px;
+    border-style: solid;
+}
+
+
+
 .button {
+    font-size: 16px;
+    margin: 35px 0;
+    border-radius: 10px; 
+    padding: 11px 16px;
+    -webkit-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+    transition: all .3s linear;
+    display: inline-block;
+    border-width: 3px;
+    border-style: solid;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #fff; /* This should be your button background color */
-    border-radius: 10px; /* Adjust for rounded corners */
+    background-color: #fff;
+    border-radius: 10px; 
     padding: 15px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow effect */
     transition: transform 0.2s ease; /* Smooth transition for hover effect */
