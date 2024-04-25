@@ -866,7 +866,7 @@ h6 {
 .button-front {
     font-size: 16px;
     margin: 35px 0;
-    border-radius: 10px; 
+    border-radius: 5px; 
     padding: 11px 16px;
     -webkit-transition: all .3s linear;
     -moz-transition: all .3s linear;
@@ -874,6 +874,13 @@ h6 {
     display: inline-block;
     border-width: 3px;
     border-style: solid;
+}
+
+.button-front:hover {
+    transform: scale(1.05);
+    background-color: gold; /* Change background to gold */
+    border-color: gold; /* Change border to gold */
+    color: #000; /*  /* Slightly enlarge on hover */
 }
 
 
