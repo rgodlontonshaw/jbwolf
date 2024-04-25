@@ -17,6 +17,13 @@
     }
 }
 
+#space {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: transparent;
+  }
+
 
 .section-heading {
     font-family: 'Sigmar One', sans-serif;
@@ -915,6 +922,91 @@ h6 {
         flex-direction: column;
     }
 }
+
+.how-to-buy-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.community-section, .links-section {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+  }
+  
+  .community-section h2, .links-section h2 {
+    margin: 0 0 10px;
+  }
+  
+  .link-button {
+    display: inline-block;
+    background-color: #555;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .link-button:hover {
+    background-color: #777;
+  }
+  
+  img {
+    width: 100%;
+    max-width: 300px; /* Adjust as needed */
+    height: auto;
+    margin: 10px 0;
+  }
+
+.guide {
+    max-width: 500px;
+}
+
+.guide h2 {
+    color:floralwhite; 
+    text-align: center;
+}
+
+.guide ol {
+    list-style: none;
+    padding: 0;
+}
+
+.guide ol li {
+    background: lightgrey;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.guide ol li:before {
+    content: counter(step-counter);
+    counter-increment: step-counter;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    margin-right: 10px;
+    background: blue;
+    border-radius: 50%;
+    color: white;
+    text-align: center;
+    display: inline-block;
+}
+
+img {
+    max-width: 500px;
+    height: auto;
+}
+
 
 
 #about {
