@@ -857,6 +857,22 @@ h6 {
     display: inline; /* Ensures the span doesn't break the line */
 }
 
+.paw-left, .paw-right {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%);
+    width: 50px; /* Adjust size as needed */
+    height: auto;
+}
+
+.paw-left {
+    left: 30px; /* Align to the left side */
+}
+
+.paw-right {
+    right: 30px; /* Align to the right side */
+}
+
 .button-nomics-panel {
     display: flex;
     justify-content: center;
