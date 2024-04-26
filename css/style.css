@@ -873,10 +873,24 @@ h6 {
     right: 30px; /* Align to the right side */
 }
 
+@keyframes scrollHorizontally {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+@keyframes zoomInOut {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
 .button-nomics-panel {
     display: flex;
     justify-content: center;
-    gap: 10px; /* Adjust the gap as necessary */
+    gap: 80px; /* Adjust the gap as necessary */
 }
 
 .button-front {
@@ -904,22 +918,23 @@ h6 {
 .button {
     font-size: 16px;
     margin: 35px 0;
-    border-radius: 10px; 
-    padding: 11px 16px;
+    border-radius: 10px;
     -webkit-transition: all .3s linear;
     -moz-transition: all .3s linear;
     transition: all .3s linear;
-    display: inline-block;
-    border-width: 3px;
-    border-style: solid;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center; /* Center content vertically and horizontally */
     background-color: #fff;
-    border-radius: 10px; 
-    padding: 15px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow effect */
-    transition: transform 0.2s ease; /* Smooth transition for hover effect */
+    padding: 0; /* Remove padding to allow image to cover entire button */
+    width: 220px;
+    height: 200px;
+    border: 3px solid; /* Consolidated border properties */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease;
+    position: relative; /* Needed for positioning text over the image */
+    overflow: hidden; /* Ensures nothing spills out */
 }
 
 .button:hover {
@@ -927,16 +942,22 @@ h6 {
 }
 
 .button img {
-    width: 100px; /* Adjust as necessary */
-    height: 100px; /* Maintain aspect ratio */
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the set area without distorting aspect ratio */
+    position: absolute; /* Positions the image absolutely within the button */
+    top: 0;
+    left: 0;
 }
 
 .button-text {
-    margin-top: 10px; /* Space between image and text */
-    color: #000; /* Text color */
-    font-weight: bold;
-    text-align: center;
-    font-size: 16px; /* Adjust text size as necessary */
+    position: absolute; /* Position text over the image */
+    top: 50%; /* Center text vertically */
+    left: 50%; /* Center text horizontally */
+    transform: translate(-50%, -50%); /* Adjust position to truly center */
+    color: white; /* Ensures text is visible on darker images */
+    z-index: 1; /* Ensures text is above the image */
+    text-align: center; /* Center the text */
 }
 
 /* Add responsive breakpoints if needed */

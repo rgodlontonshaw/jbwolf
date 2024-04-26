@@ -45,6 +45,19 @@ $(document).ready(function () {
 		}
 	});
 
+  $('.button').hover(
+    function() {
+        // Pause all animations when any button is hovered
+        $('.button-nomics-panel').css('animation-play-state', 'paused');
+        $('.button img').css('animation-play-state', 'paused');
+    },
+    function() {
+        // Resume animations when the mouse leaves any button
+        $('.button-nomics-panel').css('animation-play-state', 'running');
+        $('.button img').css('animation-play-state', 'running');
+    }
+);
+
 });
 
 
