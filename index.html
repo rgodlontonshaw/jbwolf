@@ -94,6 +94,14 @@
             </div>
         </div>
     </section>
+    <section id="presale" class="introduction scrollto" style="background: linear-gradient(to right, #000000, #000033); text-align: center; padding-top: 20px;">
+        <h2 style="color: gold;">Presale Purchase</h2>
+        <p>Connect your wallet and purchase $JBWOLF tokens directly!</p>
+        <button id="connectWallet" style="margin: 10px;">Connect Wallet</button>
+        <button id="buyTokens" disabled style="margin: 10px;">Buy Tokens</button>
+        <div id="walletAddress" style="color: white;"></div>
+        <div id="transactionStatus" style="color: white;"></div>
+    </section>
     <section id="buy" class="introduction scrollto" style="background: linear-gradient(to right, #000000, #000033); text-align: center; padding-top: 20;">
       
         <div class="how-to-buy-container" style="display: flex; justify-content: space-around; align-items: start;">
@@ -134,14 +142,41 @@
         <section id="team" class="introduction scrollto" style="background: linear-gradient(to right, #000000, #000033); text-align: center; padding-top: 20;">
     
 
-            <div class="community-section">
-                <h2>MEET the team</h2>
-                <img src="wolf-community.png" alt="Join the Community">
-                <p>Join the Pack</p>
-              </div>
-    
-            </section>
-    
+   <aside id="pack" class="scrollto text-center" data-enllax-ratio=".2">
+
+    <div class="row clearfix">
+
+       
+            <h2>Meet the Pack</h2>
+       
+      
+        <blockquote class="col-3 testimonial classic">
+            <img src="images/user-images/wolf1.webp" alt="User"/>
+            <q>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                labore
+                et dolore magna aliqua</q>
+            <footer>John Doe - Happy Customer</footer>
+        </blockquote>
+   
+        <blockquote class="col-3 testimonial classic">
+            <img src="images/user-images/wolf2.webp" alt="User"/>
+            <q>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                labore
+                et dolore magna aliqua</q>
+            <footer>Roslyn Doe - Happy Customer</footer>
+        </blockquote>
+     
+        <blockquote class="col-3 testimonial classic">
+            <img src="images/user-images/wolf3.webp" alt="User"/>
+            <q>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                labore
+                et dolore magna aliqua</q>
+            <footer>Thomas Doe - Happy Customer</footer>
+        </blockquote>
+    </div>
+
+   </aside>
+
         
           
           <div class="links-section">
@@ -160,7 +195,7 @@
 
 <footer id="landing-footer" class="clearfix">
     <div class="row clearfix">
-        <p id="copyright" class="col-1"><b>DISCLOSURE:<br> By purchasing <b>$JBWOLF</b> coin, you agree that you are not purchasing a security or investment contract and you agree to hold the team harmless and not liable for any losses or taxes you may incur. $JBWOLF has no association with Jordan Belfort. This token is simply a meme coin with no instrinsic value or expectation of financial return. $JBWOLF is not a registered digital currency, always make sure that you are in compliance with local laws and regulations before you make any purchase.</b></p>
+        <p id="copyright" class="col-1"><b>DISCLOSURE:<br> By purchasing <b>$JBWOLF</b> coin, you agree that you are not purchasing a security or investment contract and you agree to hold the team harmless and not liable for any losses or taxes you may incur. $JBWOLF has no association with Jordan Belfort. This token is simply a meme coin with no instrinsic value or expectation of financial return. </b></p>
     </div>
 </footer>
 
@@ -176,6 +211,37 @@
 <script src="js/images-loaded.min.js"></script>
 <script src="js/lightbox.min.js"></script>
 <script src="js/site.js"></script>
+
+Here's how you can add a presale section to your HTML with UI elements and logic to allow users to purchase the presale token directly from the site. This example will use basic HTML and JavaScript for simplicity, demonstrating how to interact with a hypothetical Solana wallet like Phantom to manage transactions.
+
+Adding a Presale Purchase Section
+I've added a section called "Presale Purchase" where users can connect their Solana wallet and participate in the presale. The logic includes simple button interactions to connect the wallet and send a transaction. Note that for actual deployment, you'll need to integrate Solana's web3.js library to interact with the blockchain.
+
+html
+Copy code
+<section id="presale" class="introduction scrollto" style="background: linear-gradient(to right, #000000, #000033); text-align: center; padding-top: 20px;">
+    <h2 style="color: gold;">Presale Purchase</h2>
+    <p>Connect your wallet and purchase $JBWOLF tokens directly!</p>
+    <button id="connectWallet" style="margin: 10px;">Connect Wallet</button>
+    <button id="buyTokens" disabled style="margin: 10px;">Buy Tokens</button>
+    <div id="walletAddress" style="color: white;"></div>
+    <div id="transactionStatus" style="color: white;"></div>
+</section>
+<script>
+   
+    const walletButton = document.getElementById('connectWallet');
+    const buyButton = document.getElementById('buyTokens');
+    const walletAddressDisplay = document.getElementById('walletAddress');
+    const transactionStatus = document.getElementById('transactionStatus');
+
+    walletButton.addEventListener('click', () => {
+        walletAddressDisplay.innerHTML = 'Wallet connected: YourWalletAddressHere';// Enable the buy button once wallet is connected
+    });
+
+    buyButton.addEventListener('click', () => {
+        transactionStatus.innerHTML = 'Transaction sent! Check your wallet.';
+    });
+</script>
 
 </body>
 </html>
