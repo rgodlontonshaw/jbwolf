@@ -1157,7 +1157,7 @@ img {
     background-position: center;
     min-height: 900px; 
     height: auto; 
-    background-image: url('images/bgnew.jpg'); /* Set new background image */
+    background-image: url('images/bgnew.jpg'); 
 }
 
 #banner-content.row {

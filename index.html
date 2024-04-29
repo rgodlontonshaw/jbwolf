@@ -56,7 +56,7 @@
                         <h2 class="section-title">Meet <span style="color: gold;">Jordaan</span></h2>
                         <br>
                         <h4 style="color: white;">
-                            A bold playa on <span style="color: rgb(0, 192, 230);">Solana</span>, <span style="color: gold;">Jordaan</span> 3mbodies the sh33r 4drenaline rush of howling when the 🌕 M00N 🚀 comes out!<br>
+                            A bold playa on <span style="color: rgb(0, 192, 230);">Solana</span>, <span style="color: gold;">Jordaan</span> embodies the sheer adrenaline rush of howling when the 🌕 M00N 🚀 comes out!<br>
                             <br>Embrace the hunt for a 1B market cap, byting every bit out of <span style="color: rgb(0, 192, 230);">Solana</span>! ✨<br>
                             Don't be a <span style="text-decoration: line-through;">sh33ple</span> - run with the wolves!
                             <br><br>
@@ -127,9 +127,8 @@
     
         </section>
 
-        <section id="community" class="introduction scrollto" style="background: linear-gradient(to right, #000000, #000033); text-align: center; padding-top: 20;">
-    
-
+        <section id="community" class="introduction scrollto" style="background: linear-gradient(to right, #000000, #000033); text-align: center; padding-top: 20px;">
+        
         <div class="community-section">
             <h2>$JBWOLF COMMUNITY</h2>
             <img src="wolf-community.png" alt="Join the Community">
@@ -139,43 +138,16 @@
         </section>
 
     
-        <section id="team" class="introduction scrollto" style="background: linear-gradient(to right, #000000, #000033); text-align: center; padding-top: 20;">
-    
+        <section id="presale" class="introduction scrollto" style="background: linear-gradient(to right, #000000, #000033); text-align: center; padding-top: 20px;">
+            <h2 style="color: gold;">Presale Purchase</h2>
+            <p>Connect your wallet and purchase $JBWOLF tokens directly!</p>
+            <button id="connectWallet" style="margin: 10px;">Connect Wallet</button>
+            <button id="buyTokens" disabled style="margin: 10px;">Buy Tokens</button>
+            <div id="walletAddress" style="color: white;"></div>
+            <div id="transactionStatus" style="color: white;"></div>
+        </section>
 
-   <aside id="pack" class="scrollto text-center" data-enllax-ratio=".2">
-
-    <div class="row clearfix">
-
-       
-            <h2>Meet the Pack</h2>
-       
-      
-        <blockquote class="col-3 testimonial classic">
-            <img src="images/user-images/wolf1.webp" alt="User"/>
-            <q>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                labore
-                et dolore magna aliqua</q>
-            <footer>John Doe - Happy Customer</footer>
-        </blockquote>
-   
-        <blockquote class="col-3 testimonial classic">
-            <img src="images/user-images/wolf2.webp" alt="User"/>
-            <q>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                labore
-                et dolore magna aliqua</q>
-            <footer>Roslyn Doe - Happy Customer</footer>
-        </blockquote>
-     
-        <blockquote class="col-3 testimonial classic">
-            <img src="images/user-images/wolf3.webp" alt="User"/>
-            <q>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                labore
-                et dolore magna aliqua</q>
-            <footer>Thomas Doe - Happy Customer</footer>
-        </blockquote>
-    </div>
-
-   </aside>
+        </aside>
 
         
           
@@ -190,8 +162,8 @@
           </div>
     
 
-</main>
 
+        </main>
 
 <footer id="landing-footer" class="clearfix">
     <div class="row clearfix">
@@ -212,21 +184,11 @@
 <script src="js/lightbox.min.js"></script>
 <script src="js/site.js"></script>
 
-Here's how you can add a presale section to your HTML with UI elements and logic to allow users to purchase the presale token directly from the site. This example will use basic HTML and JavaScript for simplicity, demonstrating how to interact with a hypothetical Solana wallet like Phantom to manage transactions.
 
-Adding a Presale Purchase Section
-I've added a section called "Presale Purchase" where users can connect their Solana wallet and participate in the presale. The logic includes simple button interactions to connect the wallet and send a transaction. Note that for actual deployment, you'll need to integrate Solana's web3.js library to interact with the blockchain.
 
-html
-Copy code
-<section id="presale" class="introduction scrollto" style="background: linear-gradient(to right, #000000, #000033); text-align: center; padding-top: 20px;">
-    <h2 style="color: gold;">Presale Purchase</h2>
-    <p>Connect your wallet and purchase $JBWOLF tokens directly!</p>
-    <button id="connectWallet" style="margin: 10px;">Connect Wallet</button>
-    <button id="buyTokens" disabled style="margin: 10px;">Buy Tokens</button>
-    <div id="walletAddress" style="color: white;"></div>
-    <div id="transactionStatus" style="color: white;"></div>
-</section>
+</body>
+</html>
+
 <script>
    
     const walletButton = document.getElementById('connectWallet');
@@ -242,6 +204,3 @@ Copy code
         transactionStatus.innerHTML = 'Transaction sent! Check your wallet.';
     });
 </script>
-
-</body>
-</html>
