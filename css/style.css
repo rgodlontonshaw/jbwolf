@@ -1055,41 +1055,41 @@ blockquote {
     max-width: 500px;
 }
 
-.guide h2 {
-    color:floralwhite; 
-    text-align: center;
+
+/* Responsive styling for the guide section */
+@media (max-width: 768px) {
+    .how-to-buy-container {
+        flex-direction: column; /* Stack the guides vertically on small screens */
+    }
+    .guide {
+        width: 100%; /* Full width for each guide */
+        margin-bottom: 20px; /* Space between guides */
+    }
 }
 
-.guide ol {
-    list-style: none;
-    padding: 0;
+/* Styling for each paragraph to look like a bubble */
+.guide .instructions p {
+    background-color: #f8f8f8; /* Light grey background */
+    border: 2px solid #ccc; /* Grey border */
+    border-radius: 10px; /* Rounded corners for the bubble look */
+    padding: 10px; /* Padding inside the bubble */
+    margin: 10px 0; /* Margin for spacing between paragraphs */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow for depth */
 }
 
-.guide ol li {
-    background: lightgrey;
-    margin-bottom: 10px;
-    padding: 10px;
-    border-radius: 5px;
-}
-
-.guide ol li:before {
-    content: counter(step-counter);
-    counter-increment: step-counter;
-    width: 20px;
-    height: 20px;
-    line-height: 20px;
-    margin-right: 10px;
-    background: blue;
-    border-radius: 50%;
-    color: white;
-    text-align: center;
-    display: inline-block;
+/* Optional: Enhance the heading for better visibility */
+.guide .instructions h2 {
+    color: #333; /* Darker text for better readability */
+    padding: 10px; /* Padding for consistency */
+    background-color: #eee; /* Light background for the heading */
+    border-radius: 5px; /* Slightly rounded corners for the heading */
 }
 
 img {
     max-width: 500px;
     height: auto;
 }
+
 
 
 
