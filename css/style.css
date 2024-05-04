@@ -1204,7 +1204,7 @@ img {
 
 .button-container-wolfnomics:hover::after {
     z-index: 20; /* Increase z-index on hover */
-    background-color: white; /* Semi-transparent white */
+    background-color: rgba(255, 255, 255, 0.9); /* Very lightly opaque white */
 }
 
 .fire {
