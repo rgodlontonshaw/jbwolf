@@ -938,12 +938,6 @@ blockquote {
 }
 
 
-.button-nomics-panel {
-    display: flex;
-    justify-content: center;
-    gap: 80px; /* Adjust the gap as necessary */
-}
-
 .button-front {
     font-size: 16px;
     margin: 35px 0;
@@ -1007,14 +1001,6 @@ blockquote {
     }
 }
 
-.how-to-buy-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: transparent;
-    padding: 20px;
-    border-radius: 10px;
-}
 
 .community-section, .links-section {
     background-color: #333;
@@ -1051,10 +1037,19 @@ blockquote {
     margin: 10px 0;
   }
 
-.guide {
-    max-width: 500px;
+
+.how-to-buy-container {
+
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
 }
 
+.guide {
+    max-width: 500px;
+    background-color: transparent;
+}
 
 /* Responsive styling for the guide section */
 @media (max-width: 768px) {
@@ -1069,7 +1064,6 @@ blockquote {
 
 /* Styling for each paragraph to look like a bubble */
 .guide .instructions p {
-    background-color: #f8f8f8; /* Light grey background */
     border: 2px solid #ccc; /* Grey border */
     border-radius: 10px; /* Rounded corners for the bubble look */
     padding: 10px; /* Padding inside the bubble */
@@ -1079,9 +1073,10 @@ blockquote {
 
 /* Optional: Enhance the heading for better visibility */
 .guide .instructions h2 {
+    
     color: #333; /* Darker text for better readability */
     padding: 10px; /* Padding for consistency */
-    background-color: #eee; /* Light background for the heading */
+     /* Light background for the heading */
     border-radius: 5px; /* Slightly rounded corners for the heading */
 }
 
@@ -1158,6 +1153,33 @@ img {
   color: #666;
 }
 
+.wolfanomics { /* Again, replace .parent-container with the actual class or ID */
+    display: flex;
+    flex-wrap: wrap; /* Allows multiple items to wrap onto the next line */
+    justify-content: space-around;
+     /* Adjusts spacing around items */
+    background: linear-gradient(to right, #000000, #000033);
+    text-align: center;
+    padding-top: 150px;
+    padding-bottom: 100px;
+}
+
+.button-nomics-panel {
+    display: flex;
+    justify-content: center;
+    gap: 80px; /* Adjust the gap as necessary */
+}
+
+@media (max-width: 768px) {
+    .button-nomics-panel { 
+        flex-direction: column;
+        align-items: center; /* This centers the buttons in the viewport */
+    }
+}
+
+
+
+
 .button-container-wolfnomics {
     position: relative;
     transition: background-color 0.5s ease; /* Smooth transition for background color */
@@ -1167,6 +1189,7 @@ img {
     height: 210px; /* Adjust the height to match the wolf image */
     overflow: hidden;
 }
+
 
 
 .button-container-wolfnomics .button-text {
