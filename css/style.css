@@ -1292,9 +1292,16 @@ img {
 #banner {
     background-size: cover;
     background-position: center;
-    min-height: 900px; 
-    height: auto; 
+    min-height: 800px; 
+    min-height: 100vh;
     background-image: url('images/bgnew.jpg'); 
+    
+}
+
+@media (max-width: 768px) {
+    #banner {
+        min-height: 500px; /* Reduced height for smaller screens */
+    }
 }
 
 #banner-content.row {
