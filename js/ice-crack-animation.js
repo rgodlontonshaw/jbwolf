@@ -15,7 +15,7 @@ function createCrack(startX, startY, angle) {
     // Generate multiple cracks at random positions and angles
     for (let i = 0; i < numCracks; i++) {
       const randomX = Math.floor(Math.random() * containerElement.clientWidth); // Limit X within container width
-      const randomY = Math.floor(Math.random() * containerElement.clientHeight-260); // Limit Y within container height
+      const randomY = Math.floor(Math.random() * containerElement.clientHeight-400); // Limit Y within container height
       const randomAngle = Math.floor(Math.random() * 360); // Random rotation (0-360 deg)
       const crackElement = createCrack(randomX, randomY, randomAngle);
       containerElement.appendChild(crackElement);
@@ -25,7 +25,7 @@ function createCrack(startX, startY, angle) {
   window.onload = function() {
     const iceContainer = document.querySelector('.ice-container');
     if (iceContainer) {
-      generateCracks(iceContainer, 200); // Adjust for desired number of cracks
+      generateCracks(iceContainer, 250); // Adjust for desired number of cracks
     } else {
       console.error("Element with class '.ice-container' not found!");
     }
