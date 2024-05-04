@@ -1001,17 +1001,6 @@ blockquote {
     left: 0;
 }
 
-.button-text {
-    position: absolute; /* Position text over the image */
-    top: 50%; /* Center text vertically */
-    left: 50%; /* Center text horizontally */
-    transform: translate(-50%, -50%); /* Adjust position to truly center */
-    color: white; /* Ensures text is visible on darker images */
-    z-index: 1; /* Ensures text is above the image */
-    text-align: center; /* Center the text */
-}
-
-/* Add responsive breakpoints if needed */
 @media (max-width: 768px) {
     .button-panel {
         flex-direction: column;
@@ -1169,65 +1158,73 @@ img {
   color: #666;
 }
 
-
-:root {
-    /* the only thing needed is a grainy/noisy background image */
-    --glitter: url("https://assets.codepen.io/13471/silver-glitter-background.png");
-}
-
-.button-container-fire {
+.button-container-wolfnomics {
     position: relative;
-    width: 220px; /* Adjust width as needed */
-    height: 200px; /* Adjust height as needed */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 10px;
-    overflow: hidden; /* Ensures the pseudo-elements do not overflow the container */
+    transition: background-color 0.5s ease; /* Smooth transition for background color */
+    background-color: #000;
+    overflow: hidden; /* Ensures everything is clipped to the container's bounds */
+    width: 210px;  /* Adjust the width as necessary */
+    height: 210px; /* Adjust the height to match the wolf image */
+    overflow: hidden;
 }
 
-.button-container-fire::before,
-.button-container-fire::after {
+
+.button-container-wolfnomics .button-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    line-height: 30px;
+    z-index: 1; /* Same as the image, lower than the pseudo-element */
+    transform: translate(-50%, -50%);
+    color: transparent; /* Initially transparent */
+    font-size: 25px; /* Adjust size as needed */
+    transition: color 0.5s ease; /* Smooth transition for text color */
+    mix-blend-mode: multiply; /* Blend mode for liquid effect */
+    font-family: 'Wolf Rubeus', sans-serif;
+    font-weight: bold;
+
+}
+
+.button-container-wolfnomics:hover .button-text {
+    color: #ffd700; /* Burnt yellow color on hover */
+    z-index: 21; /* Increase z-index on hover */
+}
+
+.button-container-wolfnomics::after {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0; /* These properties ensure the pseudo-elements cover the entire parent */
-    z-index: -1; /* Places the fire effect behind the content of the button */
+    width: 100%;
+    height: 100%;
+    background-color: transparent; 
+    transition: background-color 0.5s ease;
+    z-index: 20; /* Increase to ensure it's above the image */
 }
 
-.button-container-fire::before {
-    background-image: var(--glitter), var(--glitter),
-        linear-gradient(
-            0deg,
-            white 0px,
-            #ff8951 5px,
-            #dcbc169c 30%,
-            transparent 70%
-        ),
-        radial-gradient(ellipse at bottom, transparent 30%, black 60%);
-    background-size: cover, cover, 100% 100%, 100% 100%; /* Cover the entire area of the pseudo-element */
-    background-blend-mode: hard-light, color-dodge, multiply;
-    background-position: center, center, center; /* Center all backgrounds */
-    background-repeat: no-repeat, no-repeat, repeat, no-repeat;
-    mix-blend-mode: color-dodge;
-    filter: brightness(3.7) blur(7px) contrast(6);
-    animation: fire 1.75s linear infinite;
-    box-shadow: inset 0 -40px 50px -60px #63bbc5;
+.button-container-wolfnomics:hover::after {
+    z-index: 20; /* Increase z-index on hover */
+    background-color: white; /* Semi-transparent white */
 }
 
-@keyframes fire {
-    0% {
-        background-position: center 0px, center 0px, 50% 100%, center center;
-    }
-    100% {
-        background-position: center -500px, center -650px, 50% 100%, center center;
-    }
+.fire {
+    --glitter: url("https://assets.codepen.io/13471/silver-glitter-background.png");
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; }
+
+
+
+.button-wolfnomics{
+    background: none; 
+    position: relative;
+    z-index: 20; 
 }
 
-/* .fire::before,
+.fire::before,
 .fire::after {
     content: "";
     position: absolute;
@@ -1235,7 +1232,6 @@ img {
 }
 
 .fire::before {
-    content: "";
     background-image: var(--glitter), var(--glitter),
         linear-gradient(
             0deg,
@@ -1244,8 +1240,8 @@ img {
             #dcbc169c 30%,
             transparent 70%
         ),
-        radial-gradient(ellipse at bottom, transparent 30%, black 60%);
-    background-size: 350px 500px, 400px 650px, 100% 100%, 100% 100%;
+        radial-gradient(ellipse at bottom, transparent 30%, transparent 30%);
+    /* background-size: 300px 300px, 300px, 300px, 100% 100%, 100% 100%; */
     background-blend-mode: hard-light, color-dodge, multiply;
     background-position: 0px 0px, 0px 0px, var(--gradientPos);
     background-repeat: repeat, repeat, repeat, no-repeat;
@@ -1262,7 +1258,8 @@ img {
     100% {
         background-position: center -500px, center -650px, 50% 100%, center center;
     }
-} */
+}
+
 
 
 /*------------------------------------------------------------------------------------------*/
@@ -2726,3 +2723,150 @@ img {
 .row.clearfix, .row.clearfix h2, .row.clearfix blockquote, .row.clearfix footer {
     color: white; /* Sets text color to white */
 }
+
+
+
+/* main container */
+.money-container{
+	top:0px;
+	width:100%;
+	height:100%;
+	position:absolute;
+	left:0%;
+/* 	background:#1E1E20 url(http://premiumcoding.com/CSSTricks/fallingLeaves/autumn.jpg) center top no-repeat; */
+  background-size: cover;
+}
+
+.loader {
+    text-align: center;
+    position: absolute;
+    z-index: 1; /* Ensures the fire effect is behind the button */
+}
+.loader span {
+    display: inline-block;
+    
+
+	  margin: -280px 40px 54px  -34px;
+         background:url("https://cdn.theatlantic.com/assets/media/img/posts/Screen%20Shot%202013-10-08%20at%209.13.38%20AM.png");
+  background-size: contain;
+    
+    -webkit-animation: loader 10s infinite  linear;
+    -moz-animation: loader 10s infinite  linear;
+}
+.loader span:nth-child(5n+5) {
+
+    -webkit-animation-delay: 1.3s;
+    -moz-animation-delay: 1.3s;
+}
+.loader span:nth-child(3n+2) {
+
+    -webkit-animation-delay: 1.5s;
+    -moz-animation-delay: 1.5s;
+}
+.loader span:nth-child(2n+5) {
+
+    -webkit-animation-delay: 1.7s;
+    -moz-animation-delay: 1.7s;
+}
+
+.loader span:nth-child(3n+10) {
+
+    -webkit-animation-delay: 2.7s;
+    -moz-animation-delay: 2.7s;
+}
+.loader span:nth-child(7n+2) {
+
+    -webkit-animation-delay: 3.5s;
+    -moz-animation-delay: 3.5s;
+}
+.loader span:nth-child(4n+5) {
+
+    -webkit-animation-delay: 5.5s;
+    -moz-animation-delay: 5.5s;
+}
+.loader span:nth-child(3n+7) {
+
+    -webkit-animation-delay: 8s;
+    -moz-animation-delay: 8s;
+}
+@-webkit-keyframes loader {
+  0% {
+    width: 80px;
+    height: 80px;
+
+    opacity: 1;
+
+	-webkit-transform: translate(0, 0px) rotateZ(0deg);
+  }
+  75% {
+    width: 80px;
+    height: 80px;
+    opacity: 1;
+
+	-webkit-transform: translate(100px, 600px) rotateZ(270deg); 
+  }
+  100% {
+    width: 80px;
+    height: 80px;
+    opacity: 0;
+
+	-webkit-transform: translate(150px, 800px) rotateZ(360deg);
+  }
+}
+@-moz-keyframes loader {
+  0% {
+    width: 80px;
+    height: 80px;
+    opacity: 1;
+    
+	-webkit-transform: translate(0, 0px) rotateZ(0deg);
+  }
+  75% {
+    width: 80px;
+    height: 80px;
+    opacity: 1;
+   
+	-webkit-transform: translate(100px, 600px) rotateZ(270deg); 
+  }
+  100% {
+    width: 80px;
+    height: 80px;
+    opacity: 0;
+    
+	-webkit-transform: translate(150px, 800px) rotateZ(360deg);
+  }
+}
+
+
+/* Container for cracks (smaller section) */
+.ice-container {
+    position: absolute;
+    background-color: lightblue; 
+    z-index: 10;  /* Lower than the image */
+    top: 0;
+    left: 0;
+    width: 100%; /* Fills the image-container */
+    height: 100%; /* Fills the image-container */
+    overflow: hidden;
+  }
+  
+  /* Individual crack style */
+  .ice-crack {
+    position: absolute;
+    width: 2px; /* Adjust width for desired crack thickness */
+    height: 50px; /* Adjust height for desired crack length (min) */
+    background-color: white;
+    animation: crack 2s ease-in-out infinite alternate;
+    opacity: 0.8; /* Adjust opacity for line visibility */
+  }
+  
+  /* Define the animation keyframes */
+  @keyframes crack {
+    from {
+      opacity: 0; /* Start invisible */
+    }
+    to {
+      opacity: 1; /* End fully visible */
+    }
+  }
+  
